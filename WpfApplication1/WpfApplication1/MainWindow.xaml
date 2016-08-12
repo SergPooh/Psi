@@ -1,0 +1,402 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WpfApplication1.MainWindow"
+        Title="Планировщик" Height="700" Width="1000" WindowStartupLocation="CenterScreen">
+
+    <TabControl x:Name="MainTabControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TabItem x:Name="CalendarTab" Header="Календарь">
+            <TabControl x:Name="CalendarTabControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TabItem x:Name="CalendarWeekTab" Header="Неделя">
+                    <Grid MinWidth="700" MinHeight="550">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="33*"/>
+                            <RowDefinition Height="580*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" ShowGridLines="false">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="70*"></ColumnDefinition>
+                                <ColumnDefinition Width="358*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="0" Content="&lt;" Padding="1" HorizontalAlignment="Right" FontWeight="Bold" Width="25" Margin="0,3,1,3"/>
+                            <Label Grid.Column="1" Content="21/09 - 27/09" Margin="0,3" HorizontalContentAlignment="Center" Background="#FFF0F0F0" BorderBrush="#FF646464"/>
+                            <Button Grid.Column="2" Content="&gt;" Padding="1" HorizontalAlignment="Left" Width="25" FontWeight="Bold" Margin="1,3,0,3"/>
+                        </Grid>
+                        <Grid Grid.Row="1" ShowGridLines="False">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="65*"></ColumnDefinition>
+                                <ColumnDefinition Width="921*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <UniformGrid Grid.Column="0" Margin="0" Rows="20" Columns="1">
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="6:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="7:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="8:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="9:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="10:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="11:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="12:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="13:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="14:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="15:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="16:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="17:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="18:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="19:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="20:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="21:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="22:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="23:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                            </UniformGrid>
+                            <UniformGrid Grid.Column="1" Margin="0" Rows="20" Columns="7">
+                                <Label Content="Понедельник" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="Вторник" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="Среда" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="Четверг" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="Пятница" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="Суббота" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="Воскресенье" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,1"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,1"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,1"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,1"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,1"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,1"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                            </UniformGrid>
+
+
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="CalendarMonthTab" Header="Месяц">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="34*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0"></RowDefinition>
+                            <RowDefinition Height="35*"/>
+                            <RowDefinition Height="628*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" ShowGridLines="false" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label>Текст</Label>
+                            <TextBlock Grid.Column="1" Padding="5">TextBlock in Grid2</TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="2" ShowGridLines="False" Grid.ColumnSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="65*"></ColumnDefinition>
+                                <ColumnDefinition Width="921*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <UniformGrid Grid.Column="0" Margin="0" Rows="20" Columns="1">
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="6:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="7:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="8:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="9:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="10:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="11:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="12:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="13:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="14:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="15:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="16:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="17:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="18:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="19:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="20:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="21:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="22:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="23:00" Background="#FFF0F0F0" HorizontalContentAlignment="Right" BorderBrush="#FF787878" BorderThickness="1"/>
+                            </UniformGrid>
+                            <UniformGrid Grid.Column="1" Margin="0" Rows="20" Columns="7">
+                                <Label Content="Понедельник" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="Вторник" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="Среда" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="Четверг" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="Пятница" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="Суббота" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="Воскресенье" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFF0F0F0" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,0,0"/>
+                                <Label Content="" Background="#FFFcfcFc" HorizontalContentAlignment="Center" BorderBrush="#FF787878" BorderThickness="1,1,1,0"/>
+                            </UniformGrid>
+
+
+                        </Grid>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </TabItem>
+
+        <TabItem x:Name="ClientsTab" Header="Клиенты">
+            <Grid Background="#FFE5E5E5"/>
+        </TabItem>
+    </TabControl>
+
+
+</Window>
