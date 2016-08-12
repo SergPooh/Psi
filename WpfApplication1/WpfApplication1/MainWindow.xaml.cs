@@ -23,7 +23,7 @@ namespace WpfApplication1
         {
 		//for test
 		int SomeVar =1;
-		int SomeVar2 = SomeVar*2;
+		int SomeVar2 = SomeVar*5;
             InitializeComponent();
         }
     }
