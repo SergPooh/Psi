@@ -21,6 +21,9 @@ namespace WpfApplication1
     {
         public MainWindow()
         {
+		//for test
+		int SomeVar =1;
+		int SomeVar2 = SomeVar*=2;
             InitializeComponent();
         }
     }
